@@ -48,19 +48,19 @@ public class ExerciseOne {
 	
 	private static String buildResultText (String [] fileNumericContent) {
 		if (fileNumericContent!= null) {
-			StringBuilder textoFinal = new StringBuilder();
+			StringBuilder resultText = new StringBuilder();
 			Float total = Float.valueOf(0);
 			for (int i = 0; i < fileNumericContent.length ; i++) {
-				textoFinal.append(fileNumericContent[i]);
+				resultText.append(fileNumericContent[i]);
 				total = total + Float.valueOf(fileNumericContent[i]);
 				if(fileNumericContent.length - 1 != i) {
-					textoFinal.append(" + ");
+					resultText.append(" + ");
 				} else {
-					textoFinal.append(" = ");
-					textoFinal.append(total.toString());
+					resultText.append(" = ");
+					resultText.append(total.toString());
 				}
 			}
-			return textoFinal.toString();
+			return resultText.toString();
 		}
 		return "No había números en el archivo, por lo que no se realizó ninguna acción.";
 	}
