@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class ExerciseOne {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("Ingrese la ruta del archivo a procesar");
 		String fileContent = getFileContent(readInput());
 		String fileNumericContent [] = filterNumericContent(fileContent);
