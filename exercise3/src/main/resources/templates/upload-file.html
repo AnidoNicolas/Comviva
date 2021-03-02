@@ -1,0 +1,54 @@
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+				integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			  <div class="collapse navbar-collapse" id="navbarText">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active ml-5">
+			        <a class="nav-link" th:href="@{/}">Inicio<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" th:href="@{/view-table}">Ver Listado</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+	</head>
+	<body>
+		<div class= "d-flex justify-content-center align-items-center mt-5">
+			
+		
+			<div>
+				<form method="POST" enctype="multipart/form-data" action="/process-file">
+					<table>
+						<tr>
+							<td>Archivo a procesar:</td>
+							<td>
+								<input type="file" name="file" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								</td>
+							<td class= "pt-4">
+								<input class="btn btn-dark" type="submit" value="Subir Archivo" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+			<div>
+				<ul>
+					<li th:each="file : ${files}">
+						<a th:href="${file}" th:text="${file}" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class = "d-flex justify-content-center" th:if="${message}">
+				<h3 th:text="${message}"/>
+			</div>
+	</body>
+</html>

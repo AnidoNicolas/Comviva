@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	    <title>Comviva Test</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			  <div class="collapse navbar-collapse" id="navbarText">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active ml-5">
+			        <a class="nav-link" th:href="@{/}">Inicio<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" th:href="@{/upload-file}">Cargar Archivo</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+	</head>
+	<body>
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				    <tr>
+				      <th scope="col">Nombre</th>
+				      <th scope="col">Suma</th>
+				      <th scope="col">Fecha de creación</th>
+				    </tr>
+			  </thead>
+			  <tbody>
+				    <tr scope="row" th:each="file : ${files}">
+				      <td th:text="${file.fileName}">&nbsp;</td>
+				      <td th:text="${file.fileValue}">&nbsp;</td>
+	    			  <td th:text="${file.processDate}">&nbsp;</td>
+				    </tr>
+			  </tbody>
+		</table>
+	</body>
+</html>
