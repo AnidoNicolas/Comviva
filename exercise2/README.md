@@ -1,15 +1,19 @@
-# Getting Started
+# Instalación y ejecución de la aplicación
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Paso 1
+Configurar las credenciales de la DB desde el application.properties ubicado en el directorio /src/main/resources. Deberá existir un esquema "comviva" a partir de la cual generar la tabla de la aplicación.  Ejecutar la instancia local de Mysql.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.3/maven-plugin/reference/html/#build-image)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.4.3/reference/htmlsingle/#boot-features-jpa-and-spring-data)
+Ejemplo: 
+spring.datasource.url=jdbc:mysql://localhost:3306/comviva?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### Paso 2
+Generar el archivo jar con Maven. Para este proposito, desde el directorio raiz del proyecto ejecutaremos el siguiente comando: 
+"mvn -DskipTests clean install"
 
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+### Paso 3
+Ejecutar el jar generado. Ubicados en la carpeta raiz del proyecto, ejecutar el siguiente comando:
+"java -jar target/exercise2-0.0.1-SNAPSHOT.jar"
+
 
