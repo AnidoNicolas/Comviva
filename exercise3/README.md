@@ -9,7 +9,7 @@ spring.datasource.username=root
 spring.datasource.password=root
 
 ### Paso 2
-Generar el archivo jar con Maven. Para este proposito, desde el directorio raiz del proyecto ejecutaremos el siguiente comando: 
+Generar el archivo war con Maven. Para este proposito, desde el directorio raiz del proyecto ejecutaremos el siguiente comando: 
 "mvn -DskipTests clean install"
 
 ### Paso 3
