@@ -2,9 +2,10 @@ package com.comviva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class ExerciseThree {
+public class ExerciseThree extends SpringBootServletInitializer{
 	public static void main(String[] args) {
 		
       SpringApplication.run(ExerciseThree.class, args);

@@ -13,9 +13,9 @@ Generar el archivo jar con Maven. Para este proposito, desde el directorio raiz 
 "mvn -DskipTests clean install"
 
 ### Paso 3
-Ejecutar el jar generado. Ubicados en la carpeta raiz del proyecto, ejecutar el siguiente comando:
-"java -jar target/exercise3-0.0.1-SNAPSHOT.jar"
+Desde la carpeta raiz del proyecto, copiar el archivo .war generado en la carpeta target en la carpeta bin/webapps del Servidor tomcat. 
 
 ###Paso 4
-Desde navegador, ejecutar la aplicación desde localhost:8080
+Deployar la aplicación. Ubicados en la carpeta bin del tomcat ejecutar el siguiente comando: 
+"startup.bat" desde windows o "startup.sh" desde linux. La aplicación se ejecutará en la siguiente url localhost:8080/comviva-project.
 
